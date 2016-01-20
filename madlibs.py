@@ -50,14 +50,14 @@ def show_game_form():
     else:
         return render_template("game.html")
 
-@app.route('/madlib')
+@app.route('/madlib', methods=["POST"])
 def show_madlib():
-    name = request.args.get("name")
-    color = request.args.get("color")
-    noun = request.args.get("noun")
-    adjective = request.args.get("adjective")
-    quantity = request.args.get("quantity")
-    theme = request.args.get("theme")
+    name = request.form.get("name")
+    color = request.form.get("color")
+    noun = request.form.get("noun")
+    adjective = request.form.get("adjective")
+    quantity = request.form.get("quantity")
+    theme = request.form.get("theme")
 
     return render_template("madlib.html",
                             name=name,
