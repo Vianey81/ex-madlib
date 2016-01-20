@@ -1,10 +1,7 @@
-<!doctype html>
-<html>
-<head>
-  <title>The Game</title>
-</head>
-<body>
 
+{% extends 'base.html' %}
+{% block title %}The Game{% endblock %}
+{% block content %}
     <form action="/madlib" method="POST">
         Please enter some words:<br>
         <label>
@@ -49,5 +46,4 @@
 
             <input type="submit">
     </form>
-</body>
-</html>
+{% endblock %}

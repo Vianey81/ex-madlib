@@ -1,5 +1,7 @@
-<!doctype html>
-<html>
+{% extends "base.html" %}
+{% block title %}Compliments{% endblock %}
+
+{% block content %}
     <style>
         body {
             color: pink;
@@ -9,10 +11,7 @@
         }
     </style>
     
-<head>
-  <title>A Compliment</title>
-</head>
-<body>
+
     Hi {{ person }}! I think you're:
     <ul>
         {% for compliment in compliments %}
@@ -26,5 +25,4 @@
         </label>
             <input type="submit">
     </form>
-</body>
-</html>
+{% endblock %}
