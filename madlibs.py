@@ -57,13 +57,15 @@ def show_madlib():
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
     quantity = request.args.get("quantity")
+    theme = request.args.get("theme")
 
     return render_template("madlib.html",
                             name=name,
                             color=color,
                             noun=noun,
                             adjective=adjective,
-                            quantity=quantity)
+                            quantity=quantity,
+                            theme=theme)
 
 
 if __name__ == '__main__':

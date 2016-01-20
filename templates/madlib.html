@@ -4,7 +4,13 @@
   <title>The Madlib!</title>
 </head>
 <body>
-    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ name }} went to pick it up, it burst into flames in a totally {{ adjective }} way. Then it exploded into {{ quantity }} pieces.</p>
+    {% if theme == "1" %}
+        <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ name }} went to pick it up, it burst into flames in a totally {{ adjective }} way. Then it exploded into {{ quantity }} pieces.</p>
+    {% endif %}
+
+    {% if theme == "2" %}
+        <p>There were {{ quantity}} {{ noun }}s. They were {{ color }} and {{ adjective }}. They belonged to {{ name }}.</p>
+    {% endif %}
 
 </body>
 </html>
